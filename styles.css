@@ -1,135 +1,136 @@
-/* Importa as fontes */
+/* Importação de fontes e normalização */
 @import url('https://fonts.googleapis.com/css2?family=Dramaturgia+Cuba&family=Dancing+Script:wght@400;700&family=Leckerli+One&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/normalize.css/normalize.css');
 
-/* Variáveis CSS */
+/* Variáveis globais */
 :root {
     --primary-color: #ff6347;
     --secondary-color: #ffd700;
     --background-color: #f5ddb0;
     --text-color: #b7870e;
-    --accent-color: #ff9900;
     --white-color: #ffffff;
-    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    --border-radius: 12px;
+    --accent-color: #ff9900;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
     --header-font: 'Dramaturgia Cuba', 'Dancing Script', cursive;
-    --product-font: 'Leckerli One', cursive;
 }
 
-/* Reset e estilos globais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos globais */
 body {
     font-family: var(--header-font);
+    margin: 0;
+    padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
-    line-height: 1.6;
     font-size: 1.3rem;
 }
 
-/* Estilos de cabeçalho */
-header {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 2em 0;
-    text-align: center;
-    box-shadow: var(--box-shadow);
-}
-
-/* Navegação */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-}
-
-nav ul li {
-    position: relative;
-}
-
-nav ul li a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: 0.5em 0;
-    display: block;
-    transition: text-shadow 0.3s ease;
-}
-
-nav ul li a:hover {
-    text-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color), 0 0 30px var(--secondary-color);
-}
-
-/* Seções principais */
-section {
+/* Estilos do widget */
+#widget-view-live {
     padding: 2em;
     text-align: center;
-    margin-bottom: 2em;
-    background-color: var(--white-color);
-    border-radius: var(--border-radius);
+    background-color: var(--background-color);
     box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
 }
 
-/* Produtos */
-.product-category {
+#es-main-widget {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
-    padding: 2em;
+    gap: 2em;
+}
+
+/* Cabeçalho do widget */
+#es-widget-header-container-template {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1em;
+    text-align: center;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
 
-.product-category img {
-    width: 600px;
-    height: auto;
-    border-radius: var(--border-radius);
+.es-widget-header-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     margin-bottom: 1em;
+    object-fit: cover;
 }
 
-@media (max-width: 768px) {
-    .product-category img {
-        width: 200px;
-    }
+.es-widget-header-details-title {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
-/* Botões */
-button {
+.es-widget-rating-container {
+    margin-top: 0.5em;
+    font-size: 1rem;
+}
+
+/* Botão de ação */
+.es-header-btn {
+    display: inline-block;
+    margin-top: 1em;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.es-header-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Controles de navegação */
+.swiper-button {
     background-color: var(--primary-color);
     color: var(--white-color);
-    border: none;
-    border-radius: var(--border-radius);
-    padding: 12px 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    font-family: var(--header-font);
-    font-size: 1.2rem;
-    transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.3s;
+    transition: transform 0.3s ease;
 }
 
-button:hover {
-    background-color: var(--accent-color);
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.swiper-button:hover {
+    transform: scale(1.1);
 }
 
-/* Responsividade geral */
-@media (max-width: 768px) {
-    header {
-        padding: 1em 0;
-    }
-    nav ul li a {
-        font-size: 1em;
-    }
-    #home img {
-        max-width: 100%;
-        height: auto;
-    }
+/* Cartões de mídia */
+#es-media-card {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1em;
+    text-align: center;
+}
+
+.es-media-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.es-media-box img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+/* Texto das legendas */
+.es-caption-text {
+    margin-top: 1em;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-color);
 }
 
 /* Rodapé */
@@ -137,7 +138,7 @@ footer {
     background-color: var(--primary-color);
     color: var(--white-color);
     text-align: center;
-    padding: 1.5em 0;
-    font-family: var(--header-font);
-    font-size: 1rem;
+    padding: 1em;
+    font-size: 1.2rem;
+    margin-top: 2em;
 }
