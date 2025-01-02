@@ -1,144 +1,641 @@
-/* Importação de fontes e normalização */
-@import url('https://fonts.googleapis.com/css2?family=Dramaturgia+Cuba&family=Dancing+Script:wght@400;700&family=Leckerli+One&display=swap');
-@import url('https://cdn.jsdelivr.net/npm/normalize.css/normalize.css');
+  .newsletter-container, .success-container {
+            font-family: Source Sans Pro, Sans-Serif;
+        }
 
-/* Variáveis globais */
-:root {
-    --primary-color: #ff6347;
-    --secondary-color: #ffd700;
-    --background-color: #f5ddb0;
-    --text-color: #b7870e;
-    --white-color: #ffffff;
-    --accent-color: #ff9900;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --border-radius: 8px;
-    --header-font: 'Dramaturgia Cuba', 'Dancing Script', cursive;
-}
+        #menu-1-7971e5, .elementor, .instagram-feed .slick-slide {
+            position: relative;
+        }
 
-/* Estilos globais */
-body {
-    font-family: var(--header-font);
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    font-size: 1.3rem;
-}
+        .current-menu-item a,
+        .elementor-20 .elementor-element.elementor-element-34c9f591 .menu-item.current-menu-item a.hfe-menu-item {
+            font-weight: 700 !important;
+        }
 
-/* Estilos do widget */
-#widget-view-live {
-    padding: 2em;
-    text-align: center;
-    background-color: var(--background-color);
-    box-shadow: var(--box-shadow);
-    border-radius: var(--border-radius);
-}
+        .floating-menu-mobile {
+            left: 0;
+            position: fixed;
+            z-index: 10;
+            bottom: 0;
+            background-color: #a73439;
+        }
 
-#es-main-widget {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-}
+        .logo--container {
+            height: 56px;
+            padding: 0;
+        }
 
-/* Cabeçalho do widget */
-#es-widget-header-container-template {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 1em;
-    text-align: center;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-}
+        .braz--submenu, .braz--submenu-mobile {
+            display: none;
+        }
 
-.es-widget-header-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 1em;
-    object-fit: cover;
-}
+        .braz--submenu .hfe-menu-toggle .fa::before {
+            content: url('/wp-content/uploads/2024/04/Vector-5.svg') !important;
+        }
 
-.es-widget-header-details-title {
-    font-size: 2rem;
-    font-weight: bold;
-}
+        .submenuArrowActive {
+            rotate: 180deg;
+        }
 
-.es-widget-rating-container {
-    margin-top: 0.5em;
-    font-size: 1rem;
-}
+        .braz--submenu-mobile .hfe-menu-toggle .fa::before {
+            content: url('/wp-content/uploads/2024/04/Vector-1-1.svg') !important;
+        }
 
-/* Botão de ação */
-.es-header-btn {
-    display: inline-block;
-    margin-top: 1em;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    padding: 0.5em 1em;
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
-}
+        .menu-mobile .hfe-menu-toggle .fa::before,
+        .submenu-close,
+        .submenu-close-button:before {
+            display: none !important;
+        }
 
-.es-header-btn:hover {
-    background-color: var(--accent-color);
-}
+        .braz--submenu-mobile .hfe-nav-menu li.menu-item {
+            position: initial !important;
+            width: 100%;
+        }
 
-/* Controles de navegação */
-.swiper-button {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
+        .braz--submenu-mobile .hfe-layout-horizontal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
 
-.swiper-button:hover {
-    transform: scale(1.1);
-}
+        .braz--submenu-mobile .hfe-menu-item {
+            color: #fff !important;
+        }
 
-/* Cartões de mídia */
-#es-media-card {
-    background-color: var(--white-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    padding: 1em;
-    text-align: center;
-}
+        .braz--submenu-mobile .hfe-layout-horizontal .hfe-nav-menu {
+            justify-content: space-between !important;
+            align-items: center;
+            width: 100%;
+            flex-wrap: nowrap !important;
+            position: relative;
+        }
 
-.es-media-box {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--border-radius);
-}
+        .braz--submenu-mobile .menu-item a.hfe-menu-item {
+            width: 100%;
+            justify-content: center;
+        }
 
-.es-media-box img {
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-}
+        .braz--submenu-mobile .hfe-layout-horizontal .hfe-nav-menu:before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-/* Texto das legendas */
-.es-caption-text {
-    margin-top: 1em;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: var(--text-color);
-}
+        .braz--submenu-mobile .hfe-layout-horizontal .hfe-nav-menu__layout-horizontal {
+            width: 100%;
+        }
 
-/* Rodapé */
-footer {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    text-align: center;
-    padding: 1em;
-    font-size: 1.2rem;
-    margin-top: 2em;
-}
+        .braz--submenu .sub-menu {
+            width: 320px !important;
+            left: -100px !important;
+            height: 197px !important;
+            padding: 24px 16px !important;
+        }
+
+        .braz--submenu-mobile .sub-menu {
+            top: -148px !important;
+            width: 100vw !important;
+            left: 0 !important;
+            padding: 1rem !important;
+            z-index: 999;
+        }
+
+        .braz--submenu-mobile {
+            width: 100%;
+        }
+
+        .braz--submenu-mobile .sub-menu a.hfe-sub-menu-item,
+        .elementor-20 .braz--submenu .sub-menu a.hfe-sub-menu-item {
+            padding: 0.5rem 0 !important;
+            text-align: center;
+            display: block;
+            min-height: 30px;
+            background-color: #f1e1cf;
+            border-radius: 4px;
+            margin-top: 0.875rem;
+            color: #a73439 !important;
+            font-weight: 700 !important;
+        }
+
+        .braz--submenu-mobile .sub-menu a.hfe-sub-menu-item span i,
+        .elementor-20 .braz--submenu .sub-menu a.hfe-sub-menu-item span i {
+            display: none;
+        }
+
+        .braz--submenu #menu-item-2169:before,
+        .braz--submenu #menu-item-2172:before,
+        .braz--submenu #menu-item-3388:before,
+        .braz--submenu-mobile #menu-item-2169:before,
+        .braz--submenu-mobile #menu-item-2569:before,
+        .braz--submenu-mobile #menu-item-2572:before,
+        .selected-house-text {
+            content: "Selecione um de nossos cardápios:";
+            color: #a6302c;
+            font-family: Source Sans Pro, Sans-Serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 21px;
+        }
+
+        .braz--submenu-mobile #menu-item-2572:before {
+            content: "Reserve em uma de nossas casas:";
+        }
+
+        .braz--submenu #menu-item-3388:before {
+            content: "Faça seu evento em uma de nossas casas:";
+        }
+
+        .braz--submenu .menu-item {
+            border: none !important;
+        }
+
+        .braz--submenu #menu-1-34c9f591>li>.sub-menu {
+            display: none;
+            visibility: visible !important;
+            transition: 0.5s;
+        }
+
+        .braz--submenu #menu-1-34c9f591>li>.showFirstSubmenu,
+        .info-safe {
+            display: block;
+        }
+
+        #menu-item-2168 .sub-menu,
+        #menu-item-2169 .sub-menu,
+        #menu-item-2170 .sub-menu,
+        #menu-item-2171 .sub-menu,
+        #menu-item-2172 .sub-menu,
+        #menu-item-2173 .sub-menu,
+        #menu-item-3388 .sub-menu,
+        #menu-item-3389 .sub-menu,
+        #menu-item-3390 .sub-menu {
+            display: none;
+            left: 0 !important;
+            top: 0 !important;
+        }
+
+        #menu-item-2568 .sub-menu,
+        #menu-item-2569 .sub-menu,
+        #menu-item-2570 .sub-menu,
+        #menu-item-2571 .sub-menu,
+        #menu-item-2572 .sub-menu,
+        #menu-item-2573 .sub-menu {
+            top: -5px !important;
+            left: 0 !important;
+        }
+
+        #menu-1-7971e5:after {
+            content: '';
+            width: 2px;
+            background-color: #fff;
+        }
+
+        .submenu-back-button {
+            color: #a73439;
+            text-decoration: none;
+            font-size: 0.75rem;
+            position: absolute;
+            top: 10px;
+            right: 1rem;
+        }
+
+        .submenu-back-button:before,
+        .submenu-close-button:after {
+            content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2793 4.94L7.2193 8L10.2793 11.06L9.33263 12L5.33263 8L9.33263 4L10.2793 4.94Z" fill="%23A73439"/></svg>');
+            top: 2px;
+            left: -15px;
+        }
+
+        .submenu-close-button:after {
+            content: url('data:image/svg+xml,<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.47788 5.20833L10.5616 9.33036V10.4167H9.4854L5.40166 6.29464L1.31792 10.4167H0.241699V9.33036L4.32544 5.20833L0.241699 1.08631V0H1.31792L5.40166 4.12202L9.4854 0H10.5616V1.08631L6.47788 5.20833Z" fill="%23A73439"/></svg>');
+        }
+
+        .elementor.elementor-20 {
+            position: fixed;
+            background-color: #fff;
+            width: 100%;
+        }
+.braz-veloce .post p, .post p {
+            font-weight: 400;
+            line-height: 21px;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+        }
+
+        .btn--saiba-mais .elementor-button-link {
+            padding: 12px 90px;
+            box-shadow: none !important;
+            height: 50px;
+            text-shadow: none !important;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        .btn-casas-braz .elementor-button-link {
+            padding: 16px 50px;
+            box-shadow: 0 4px 24px 0 rgba(9, 44, 76, .2) !important;
+            text-shadow: none !important;
+        }
+
+        .btn-reservas .elementor-button-content-wrapper,
+        .home-separator,
+        .post-veloce .post-info .post-link.show,
+        .post-veloce .post-info p.show {
+            display: block;
+        }
+
+        .braz-home-title {
+            font-family: 'AW Conqueror Inline', Sans-Serif;
+        }
+
+        .btn--saiba-mais .elementor-button-text {
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        .btn-reservas .elementor-button-link {
+            height: 50px;
+            max-width: 270px;
+        }
+
+        .btn-reservas .elementor-button {
+            text-align: end;
+        }
+
+        .btn--saiba-mais .elementor-button-content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .post p, .post-title {
+            font-family: "Source Sans Pro", Sans-Serif;
+            font-size: 1rem;
+        }
+
+        .post-title {
+            color: #a6302c;
+            margin: 12px 0;
+            font-weight: 700;
+        }
+
+        .post p {
+            color: #000;
+            max-width: 420px;
+            max-height: 47px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+        }
+
+        .braz-veloce .slick-slide,
+        .queridinhos-braz-pizzaria .slick-slide {
+            transition: .4s ease-in-out;
+            padding: 50px 20px 0;
+            max-width: 314px;
+            outline: 0;
+        }
+
+        .braz-veloce .slick-track,
+        .queridinhos-braz-pizzaria .slick-track {
+            margin: 0;
+        }
+
+        .braz-veloce .slick-current,
+        .queridinhos-braz-pizzaria .slick-current {
+            max-width: 300px;
+        }
+
+        .endereco-container {
+            width: 265px;
+            min-width: 260px;
+            height: 320px;
+            border-radius: 3px;
+            background-size: 100% 100%;
+        }
+
+        .braz-pizzaria-enderecos>.e-con-inner .slick-dots {
+            bottom: -35px;
+        }
+
+        .braz-pizzaria-enderecos .slick-list {
+            margin-top: 1.5rem;
+        }
+
+        .braz-endereco-text-container {
+            background: linear-gradient(360deg, #000000ad 60%, #84848433 96.67%);
+        }
+
+        .braz-veloce-wrapper {
+            max-height: 490px;
+        }
+
+        .veloce-container {
+            display: flex;
+            gap: 13px;
+        }
+
+        .post-veloce {
+            position: relative;
+            border-radius: 4px;
+            background: linear-gradient(to bottom, transparent 80%, #00000066 85%, #000000ed 100%),
+                        url(http://familiabraz.com.br/wp-content/uploads/2024/04/Rectangle-58.png) center no-repeat;
+            width: 280px;
+            height: 320px;
+        }
+
+        .post-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+        }
+
+        .post-veloce .post-info .post-link,
+        .post-veloce .post-info p {
+            display: none;
+        }
+
+        .post-veloce .post-info .post-link,
+        .post-veloce .post-info .post-title,
+        .post-veloce .post-info p {
+            color: #fff;
+            font-family: Source Sans Pro, Sans-Serif;
+            font-size: 1.25rem;
+            margin: 0;
+        }
+
+        .post-veloce .post-info p {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .post-veloce .post-info .post-link {
+            text-align: right;
+            font-size: .75rem;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .post-veloce .post-info .post-link:hover {
+            color: #fff;
+        }
+
+        .post {
+            box-sizing: border-box;
+        }
+
+        .braz-veloce .post-title {
+            margin: 12px 0;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .braz-veloce .post p {
+            font-size: 1rem;
+            max-width: 420px;
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+        }
+
+        .slick-slide img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .slick-dots {
+            width: auto;
+            border: 1px solid #a6302c;
+            border-radius: 8px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 8px;
+            bottom: -5px;
+        }
+
+        .slick-dots li,
+        .slick-dots li button,
+        .slick-dots li button:before {
+            width: auto;
+            height: auto;
+            padding: 0;
+            font-size: 0;
+            margin: 0;
+        }
+
+        .slick-dots li button {
+            width: 22px;
+            height: 7px;
+            position: relative;
+            top: -15px;
+            background-color: transparent;
+        }
+
+        .slick-dots .slick-active button,
+        .slick-dots li button:hover {
+            background-color: #a6302c;
+        }
+
+        @media (max-width: 768px) {
+            .familia-braz-text {
+                text-align: justify !important;
+                padding: 0 16px;
+            }
+
+            .btn-casas-braz .elementor-widget-container,
+            .familia-braz-text .elementor-widget-container {
+                margin: 0 !important;
+            }
+
+            .btn-casas-braz .elementor-button-link {
+                padding: 3px 4px;
+            }
+
+            .familia-braz-casas {
+                max-width: 30% !important;
+                min-height: 160px !important;
+                padding: 0 5px !important;
+            }
+
+            .familia-braz-images-container {
+                min-height: 0 !important;
+                gap: 5px !important;
+            }
+
+            .familia-braz-elementor-container>.e-con-inner {
+                padding-bottom: 24px;
+                padding-top: 24px;
+            }
+
+            .btn-casas-braz .elementor-button-text {
+                font-size: 12px;
+            }
+
+            .btn--saiba-mais {
+                min-width: 288px !important;
+            }
+
+            .btn--saiba-mais .elementor-button-link {
+                width: 100%;
+                font-size: 1rem;
+            }
+
+            .queridinhos-braz-pizzaria .slick-slide img {
+                min-height: 175px;
+                max-height: 175px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .queridinhos-braz-pizzaria-slider {
+                padding: .5rem;
+                margin-bottom: 40px !important;
+            }
+
+            .queridinhos-braz-pizzaria .slick-slide {
+                transition: .4s ease-in-out;
+                padding: .5rem .5rem 0;
+                max-width: 350px;
+                outline: 0;
+            }
+
+            .braz-veloce .slick-list,
+            .queridinhos-braz-pizzaria .slick-list {
+                padding: 0 !important;
+            }
+
+            .braz-veloce .btn--saiba-mais,
+            .queridinhos-braz-pizzaria .btn--saiba-mais {
+                width: calc(100% - 2rem) !important;
+            }
+
+            .queridinhos-braz-pizzaria .slick-dots {
+                bottom: -1rem;
+            }
+
+            .endereco-container {
+                width: 330px;
+                min-width: 330px;
+                height: 380px;
+            }
+
+            .braz-pizzaria-enderecos .slick-slider {
+                max-width: 330px;
+            }
+
+            .post-title {
+                font-size: 1.125rem;
+            }
+
+            .braz-veloce .slick-current {
+                padding: 0 .5rem !important;
+            }
+
+            .braz-veloce .slick-slide {
+                transition: .4s ease-in-out;
+                padding: 1.2rem .5rem 0;
+                max-width: 350px;
+                outline: 0;
+            }
+
+            .post p {
+                max-height: 91px;
+            }
+
+            .braz-veloce-description p {
+                font-size: 1rem !important;
+                text-align: justify !important;
+                padding: 0 1rem;
+                line-height: 1.5rem !important;
+            }
+
+            .braz-veloce--title h2 {
+                font-size: 1.65rem !important;
+            }
+
+            .braz-veloce .slick-dots {
+                bottom: -3.2rem;
+            }
+
+            .main-home-slider {
+                margin-bottom: 0 !important;
+            }
+
+            .braz-pizzaria-enderecos .slick-dots {
+                min-width: 200px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .queridinhos-braz-pizzaria .slick-current {
+                width: auto !important;
+                max-width: unset;
+                padding: 0 27px !important;
+            }
+
+              .queridinhos-braz-pizzaria .slick-slide {
+            padding: 50px 27px 0;
+        }
+
+        .queridinhos-braz-pizzaria .slick-current img {
+            max-height: 295px !important;
+            min-height: 295px !important;
+            min-width: 420px !important;
+            max-width: unset;
+            width: 100%;
+        }
+
+        .queridinhos-braz-pizzaria .slick-list {
+            max-width: 1000px;
+            margin: 0 0 0 6% !important;
+            padding: 0 17% 0 0 !important;
+            min-height: 400px;
+            max-height: 400px;
+        }
+
+        .queridinhos-braz-pizzaria .slick-slide img {
+            max-width: 100%;
+            min-width: 223px;
+            max-height: 156px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .endereco-container {
+            width: 265px;
+            min-width: 260px;
+            height: 320px;
+            border-radius: 3px;
+        }
+
+        .braz-pizzaria-enderecos .slick-slide {
+            margin: 0 .5rem;
+        }
+
+        .endereco-rua, .post.slick-slide.slick-cloned:last-child {
+            display: none;
+        }
+
+        .braz-veloce .slick-current {
+            width: auto !important;
+            max-width: unset;
+            padding: 0 20px;
+        }
+
+        .braz-veloce .slick-current img {
+            min-height: 395px;
+            min-width: 100%;
+        }
+
+        .braz-veloce .slick-list {
+            max-width: 1000px;
+            padding: 0 17% 0 0 !important;
+            min-height: 560px;
+            max-height: 560px;
+        }
