@@ -639,3 +639,210 @@
             min-height: 560px;
             max-height: 560px;
         }
+/* Estilos gerais */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    color: #a6302c;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Ajustes para Botões */
+.elementor-button {
+    background-color: #a73439;
+    color: white;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.elementor-button:hover {
+    background-color: #841e2c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para os banners */
+.banner-container {
+    background-color: #f1e1cf;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.banner-title {
+    font-family: 'AW Conqueror Inline', sans-serif;
+    font-size: 2.5rem;
+    color: #a6302c;
+    margin-bottom: 1rem;
+}
+
+.banner-description {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.125rem;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+footer a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+footer .social-links {
+    margin-top: 1rem;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.25rem;
+}
+
+footer .social-links a:hover {
+    color: #a6302c;
+}
+
+/* Estilo para a seção de depoimentos */
+.testimonial-container {
+    background-color: #fafafa;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonial-container .testimonial {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-container .testimonial p {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.testimonial-container .testimonial .client-name {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #a6302c;
+    margin-top: 1rem;
+}
+
+/* Ajustes para Formulários */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+input[type="submit"] {
+    background-color: #a73439;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #841e2c;
+}
+
+/* Estilo para animações de entrada */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos de responsividade */
+@media (max-width: 1024px) {
+    .logo--container {
+        height: 50px;
+    }
+
+    .banner-title {
+        font-size: 2rem;
+    }
+
+    .testimonial-container .testimonial {
+        padding: 15px;
+    }
+
+    .btn--saiba-mais .elementor-button-link {
+        font-size: 1rem;
+        padding: 10px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-container {
+        padding: 40px 20px;
+    }
+
+    .banner-title {
+        font-size: 1.75rem;
+    }
+
+    .familia-braz-casas {
+        max-width: 100% !important;
+        min-height: 160px !important;
+        padding: 10px !important;
+    }
+
+    .btn--saiba-mais .elementor-button-link {
+        padding: 10px 40px;
+    }
+
+    footer .social-links {
+        margin-top: 1rem;
+    }
+}
